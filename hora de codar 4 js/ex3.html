@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+</head>
+<body>
+    <script>
+        
+        let frutas = ["Banana", "Maça", "Morango", "Uva"];
+        alert(`Essas são as frutas disponíveis: ${frutas.join(', ')}`);
+    
+       
+        function remover(fruta) {
+            const frutaArr = frutas.indexOf(fruta);
+    
+            if (frutaArr !== -1) {  
+                frutas.splice(frutaArr, 1); 
+                alert("Fruta foi retirada");
+            } else {
+                alert("Fruta indisponível no nosso mercado");
+            }
+        }
+    
+        while (frutas.length > 0) {
+            let fru = prompt("Digite o nome de uma fruta para remover:");
+    
+            if (fru === null || fru === "") {
+                break;
+            }
+    
+            remover(fru.trim());
+        }
+
+        alert("Lista de compras finalizada.");
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+</head>
+<body>
+    <script>
+        let estudantes = [];
+
+        function cadastrarEstudante() {
+            let nomeEstudante = prompt("Digite o nome do estudante (ou 'PARE' para terminar):");
+    
+            
+            if (nomeEstudante.toUpperCase() === "PARE") {
+               
+                alert(`Quantidade de estudantes cadastrados: ${estudantes.length}`);
+                alert("Lista de estudantes: " + estudantes.join(", "));
+            } else if (nomeEstudante !== null && nomeEstudante !== "") {
+               
+                estudantes.push(nomeEstudante);
+                cadastrarEstudante();  
+            } else {
+                alert("Nome inválido. Tente novamente.");
+                cadastrarEstudante();  
+            }
+        }
+    
+        cadastrarEstudante();  
+    </script>
+</body>
+</html>
